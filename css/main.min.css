@@ -1,0 +1,359 @@
+/* Setup */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Components */
+.nav_header {
+  position: relative;
+  background-color: hsl(236, 67%, 10%);
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav_header .logo {
+  width: 3rem;
+  height: 3rem;
+  background-color: hsl(0, 100%, 73%);
+}
+.nav_header ul li {
+  position: relative;
+  list-style: none;
+  padding: 1rem;
+}
+.nav_header ul li::after {
+  position: relative;
+  content: "|";
+  padding-left: 5px;
+  padding-right: 2px;
+}
+.nav_header ul li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: hsl(0, 100%, 73%);
+}
+
+.menu-burger {
+  content: "-";
+  position: fixed;
+  z-index: 111;
+  font-size: 3rem;
+  top: 0.2rem;
+  right: 2rem;
+  height: 3rem;
+  color: transparent;
+}
+.menu-burger, .menu-burger::before, .menu-burger::after {
+  transition-timing-function: ease-in-out;
+  transition-duration: 400ms;
+}
+.menu-burger::before {
+  content: "-";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  rotate: -45deg;
+  color: white;
+}
+.menu-burger::after {
+  content: "-";
+  position: absolute;
+  rotate: 45deg;
+  top: 0px;
+  left: 8px;
+  color: white;
+}
+.menu-burger.open {
+  color: white;
+  content: "";
+}
+.menu-burger.open::before {
+  content: "-";
+  top: -5px;
+  left: 0px;
+  rotate: unset;
+}
+.menu-burger.open::after {
+  content: "-";
+  top: 5px;
+  left: 0px;
+  rotate: unset;
+}
+
+@media (min-width: 400px) {
+  .nav_header {
+    display: none;
+  }
+  .nav_header.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .nav_header.open ul {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav_header.open ul li:nth-child(even) {
+    color: hsl(236, 67%, 10%);
+    background: white;
+  }
+  .menu-burger {
+    z-index: 1111;
+  }
+}
+@media (min-width: 760px) {
+  .nav_header {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100vw !important;
+    height: 10vh !important;
+  }
+  .nav_header ul {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+  .menu-burger {
+    visibility: hidden;
+  }
+}
+.hero {
+  margin-left: 10vw;
+  padding: 2rem;
+  background-color: hsl(0, 100%, 73%);
+  color: black;
+  width: 80vw;
+  height: 30vh;
+}
+.hero__text {
+  margin-left: 5rem;
+  margin-top: 2rem;
+  padding: 0.2rem;
+  font-size: larger;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.information_bar {
+  width: 100vw;
+  height: 8vh;
+  background-color: hsl(236, 67%, 10%);
+  padding-top: 0.98rem;
+}
+.information_bar__slider {
+  color: white;
+  animation: slide infinite 18s ease-in-out;
+}
+
+@keyframes slide {
+  0%, 100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+}
+.side-menu {
+  position: fixed;
+  top: 10vh;
+  left: 0vh;
+  width: 7vw;
+  height: 60vh;
+  background-color: hsl(0, 100%, 93%);
+  color: black;
+  z-index: 1;
+}
+.side-menu .nav_menu {
+  padding-left: 0.2rem;
+}
+.side-menu .nav_menu li {
+  list-style: none;
+}
+.side-menu .nav_menu li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: black;
+}
+
+article {
+  background-color: hsl(236, 67%, 10%);
+  color: white;
+  width: 75vw;
+  height: auto;
+  padding: 1rem;
+}
+article [padding=shift] {
+  padding-left: 2rem;
+}
+article header {
+  padding: 2rem;
+  font-weight: 600;
+}
+article main h1, article main h2, article main h3, article main h4, article main h5, article main h6 {
+  margin: 0.1rem;
+}
+article main p {
+  padding-bottom: 1rem;
+}
+section.related_articles {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50vw;
+  height: 40vh;
+}
+section.related_articles .img_container {
+  padding: 1rem;
+  border: solid black 2px;
+  border-top-right-radius: 0.2rem;
+  width: 10rem;
+  height: 8rem;
+}
+section.related_articles .img_container img {
+  max-width: 90%;
+  max-height: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+img.background {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.flow {
+  margin-left: 20vw;
+}
+
+.flow2 {
+  margin-left: 8vw;
+}
+
+[yin=default] {
+  width: 100%;
+  height: 100%;
+}
+[yin=default] img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+[yin=card] {
+  width: 23vw;
+  height: auto;
+  padding: 2rem;
+}
+[yin=card] img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+[yang=default] {
+  background-color: hsl(236, 67%, 10%);
+  color: white;
+}
+
+.audio {
+  margin-left: 30vw;
+  font-family: "Times New Roman", Times, serif;
+}
+.audio h1, .audio h2, .audio h3 {
+  line-height: 2;
+  padding: 1rem;
+}
+.audio span, .audio p {
+  padding: 1rem;
+}
+
+table {
+  width: 80vw;
+  height: auto;
+}
+table tr {
+  width: 100%;
+  min-height: auto;
+}
+table tr th {
+  background: hsl(236, 67%, 10%);
+  color: white;
+  min-width: 2rem;
+  min-height: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+table tr td {
+  text-align: center;
+  background-color: hsl(0, 100%, 73%);
+  width: 2rem;
+  height: 1rem;
+  position: relative;
+  padding: 0.4rem;
+  z-index: 0;
+}
+table tr td span {
+  transition-timing-function: ease-in-out;
+  transition-duration: 2s;
+  opacity: 0;
+  display: none;
+}
+table tr td span button {
+  cursor: pointer;
+  padding: 3px;
+  background-color: hsl(0, 100%, 73%);
+  color: black;
+}
+table tr td.eagle_vision:hover span {
+  opacity: 1;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  z-index: 111;
+  width: 100%;
+  height: 100%;
+}
+table tr td:nth-child(even) {
+  background-color: hsl(0, 100%, 73%);
+}
+
+/* 
+
+@include size_xs{
+}
+
+@include size_sm{
+}
+
+@include size_md{
+}
+
+
+@include size_lg{
+}
+
+@include size_xl{
+} *//*# sourceMappingURL=main.min.css.map */
