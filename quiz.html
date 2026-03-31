@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - A1 Russian Course</title>
+    <link rel="stylesheet" href="css/main.min.css?v=172">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            background: white !important;
+            color: black !important;
+        }
+        .background {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <img src="./img/art/knight.jpeg" class="background" alt="">
+    <div class="nav_header">
+        <div class="logo"></div>
+        <ul>
+            <li>
+                <a href="index.html">home</a>
+            </li>
+            <li>
+                <a href="notebook.html">notebook</a>
+            </li>
+            <li>
+                <a href="dictionary.html">dictionary</a>
+            </li>
+            <li>
+                <a href="extra_resources.html">extra resources</a>
+            </li>
+            <li>
+                <a href="contact_us.html">contact us</a>
+            </li>
+            <li>
+                <a href="quiz.html">quiz</a>
+            </li>
+        </ul>
+    </div>
+    <div class="menu-burger open">
+       -
+    </div>
+
+    <div class="quiz">
+        <h1>Vocabulary Quiz</h1>
+        <div id="quiz-container">
+            <p id="question">Loading...</p>
+            <input type="text" id="answer" placeholder="Enter the English translation">
+            <button id="submit">Submit</button>
+            <p id="feedback"></p>
+            <p id="score">Score: 0 / 0</p>
+        </div>
+        <button id="next">Next Question</button>
+        <button id="restart">Restart Quiz</button>
+    </div>
+
+    <script src="js/main.js?v=25"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

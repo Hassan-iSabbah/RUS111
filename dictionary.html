@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary - A1 Russian Course</title>
+    <link rel="stylesheet" href="css/main.min.css?v=172">
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <img src="./img/art/knight.jpeg" class="background" alt="">
+    <div class="nav_header">
+        <div class="logo"></div>
+        <ul>
+            <li>
+                <a href="index.html">home</a>
+            </li>
+            <li>
+                <a href="notebook.html">notebook</a>
+            </li>
+            <li>
+                <a href="dictionary.html">dictionary</a>
+            </li>
+            <li>
+                <a href="extra_resources.html">extra resources</a>
+            </li>
+            <li>
+                <a href="contact_us.html">contact us</a>
+            </li>
+            <li>
+                <a href="quiz.html">quiz</a>
+            </li>
+        </ul>
+    </div>
+    <div class="menu-burger open">
+       -
+    </div>
+
+    <div class="dictionary">
+        <h1>Russian Dictionary</h1>
+        <input type="text" id="search" placeholder="Search for a word...">
+        <div id="word-list">
+        </div>
+    </div>
+
+    <script src="js/main.js?v=25"></script>
+    <script src="js/dictionary.js"></script>
+    <script>
+        jQuery(document).ready(function(){
+            jQuery('#search').on('input', function(){
+                var query = jQuery(this).val().toLowerCase();
+                jQuery('.word-item').each(function(){
+                    var word = jQuery(this).data('word').toLowerCase();
+                    if (word.includes(query)) {
+                        jQuery(this).show();
+                    } else {
+                        jQuery(this).hide();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
