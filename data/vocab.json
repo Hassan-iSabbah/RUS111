@@ -1,0 +1,17 @@
+[
+    {"russian": "встреча", "stress": "встрéча", "english": "meeting"},
+    {"russian": "друг", "stress": "друг", "english": "friend"},
+    {"russian": "жизнь", "stress": "жизнь", "english": "life"},
+    {"russian": "рука", "stress": "рукá", "english": "hand, arm"},
+    {"russian": "журнал", "stress": "журнáл", "english": "magazine"},
+    {"russian": "читать", "stress": "чита́ть", "english": "to read"},
+    {"russian": "смотреть", "stress": "смотрéть", "english": "to watch, to look"},
+    {"russian": "видеть", "stress": "ви́деть", "english": "to see"},
+    {"russian": "стоять", "stress": "стоя́ть", "english": "to stand"},
+    {"russian": "думать", "stress": "ду́мать", "english": "to think"},
+    {"russian": "просто", "stress": "прóсто", "english": "just, simply"},
+    {"russian": "сейчас", "stress": "сейчáс", "english": "now"},
+    {"russian": "только", "stress": "тóлько", "english": "only"},
+    {"russian": "пойдём", "stress": "пойдём", "english": "let's go"},
+    {"russian": "куда", "stress": "кудá", "english": "where to"}
+]
